@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <Switch>
         <Route path='/' exact component = {MainPage}/>
-        <Redirect exact from='/' to = '/main' />
       </Switch>
     </div>
   );
