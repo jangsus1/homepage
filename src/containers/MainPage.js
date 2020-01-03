@@ -122,7 +122,7 @@ class MainPage extends Component{
                                     onClick = {() => window.location = "https://github.com/jangsus1/swpp2019-team11"}
                                 >
                                     <Icon name = "github" />
-                                    https://github.com/jangsus1/swpp2019-team11
+                                    https://github.com/swsnu/swpp2019-team11
                                 </Header>
 
                             </Grid.Column>
