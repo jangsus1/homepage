@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import App from './App';
 import store from './store/store';
 import 'semantic-ui-css/semantic.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const history = createBrowserHistory();
