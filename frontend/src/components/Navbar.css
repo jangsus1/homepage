@@ -1,5 +1,5 @@
 
-.container {
+.Navbar {
     position: fixed; /* Sit on top of the page content */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
@@ -8,6 +8,12 @@
     right: 0;
     bottom: 0;
     opacity: 1;
+    margin : 0;
+    padding: 0;
+    overflow: hidden;
+    transition: backdrop-filter .5s linear;
+    border-width : 0.1;
+    z-index : 3;
 }
 
 #menu {
@@ -17,5 +23,14 @@
 .menuItem:hover {
     opacity: 0.7;
     cursor : pointer;
+    transition: .5s ease;
 
+}
+
+#Item {
+    color : #06dce7;
+}
+
+#blank {
+    height : 100vh;
 }

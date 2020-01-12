@@ -12,12 +12,14 @@ class Navbar extends Component {
     hamburgerToggle = () => {
       if(this.state.active){
         document.getElementById("menu").style.display = "none";
-        document.getElementById("container").style.backdropFilter = "none"
+        document.getElementById("container").style.pointerEvents = "none";
+        document.getElementById("container").style.backdropFilter = "blur(0px)"
         
       }
       else{
         document.getElementById("menu").style.display = "block";
-        document.getElementById("container").style.backdropFilter = "blur(5px)"
+        document.getElementById("container").style.pointerEvents = "all";
+        document.getElementById("container").style.backdropFilter = "blur(10px)"
       }
       this.setState({active : !this.state.active})
       
@@ -38,10 +40,12 @@ class Navbar extends Component {
 
     render(){
     return(
-      <Grid id = "container" className = "container">
-        <Grid.Row columns={1}>
+      <div id = "container" className = "Navbar" style = {{margin:0}}>
+      <Grid >
+        <Grid.Row id = "burger" columns={1}>
           <Grid.Column>
           <Burger
+            id = "burger"
             onClick={this.hamburgerToggle}
             active={this.state.active}
             style = {{float : "right", outline : "none"}}
@@ -57,23 +61,28 @@ class Navbar extends Component {
             <Grid padded textAlign = "center">
               <Grid.Row centered columns = {1}>
                 <Grid.Column textAlign = "center" >
-                <Header onClick = {() => this.menuClick(1)} className = "menuItem" size = "huge" style = {{marginTop : -100}}>Home</Header>
+                <Header id = "Item" onClick = {() => this.menuClick(1)} className = "menuItem" size = "huge" style = {{marginTop : 50}}>Home</Header>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row>
               <Grid.Column textAlign = "center" >
-                <Header onClick = {() => this.menuClick(2)} className = "menuItem" size = "huge" style = {{marginTop : -50}}>Blog</Header>
+                <Header id = "Item" onClick = {() => this.menuClick(2)} className = "menuItem" size = "huge" style = {{marginTop : 50}}>Blog</Header>
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row>
               <Grid.Column textAlign = "center" >
-                <Header onClick = {() => this.menuClick(3)} className = "menuItem" size = "huge" style = {{marginTop : 30}}>Project</Header>
+                <Header id = "Item" onClick = {() => this.menuClick(3)} className = "menuItem" size = "huge" style = {{marginTop : 50}}>Project</Header>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
           </Grid.Column>
         </Grid.Row>
+        <Grid.Row id = "blank">
+          <Grid.Column>
+          </Grid.Column>
+        </Grid.Row>
       </Grid>
+      </div >
     )
     }
 }

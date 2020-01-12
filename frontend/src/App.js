@@ -3,10 +3,12 @@ import {
   Route, Redirect, Switch,
 } from 'react-router-dom';
 import MainPage from './containers/MainPage';
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Switch>
         <Route path='/homepage' exact component = {MainPage}/>
         <Redirect exact from = '/' to = '/homepage' />

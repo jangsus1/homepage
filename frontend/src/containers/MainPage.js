@@ -1,8 +1,9 @@
 import React, {Component, createRef} from 'react'
-import {Header, Grid, Icon, Sticky, Ref} from 'semantic-ui-react'
+import {Header, Grid, Icon} from 'semantic-ui-react'
 import {Fade} from 'react-reveal'
 import {Popover, OverlayTrigger} from 'react-bootstrap'
-import Navbar from '../components/Navbar'
+import './MainPage.css'
+
 
 
 class MainPage extends Component{
@@ -27,7 +28,6 @@ class MainPage extends Component{
 
     render() {
         return(
-            <div>
                 <div id = "main" className = "MainPage" style = {{minWidth : "300px", display : "block", position : "relative"}}>   
                     <Grid centered style = {{backgroundColor : '#eeeeee'}}>
                         <Grid.Row textAlign='center' style = {{height : '550px'}} >
@@ -54,12 +54,12 @@ class MainPage extends Component{
                             <Grid.Column width={8}></Grid.Column>
                             <Grid.Column width={8}></Grid.Column>
                         </Grid.Row>
-                        <Grid.Row style = {{marginTop : "-5px"}} columns = {1}>
+                        <Grid.Row id = "GridRows" style = {{marginTop : "-5px"}} columns = {1}>
                             <Grid.Column textAlign='center'>
                                 <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '3em', color : "#222831"}}></Header>
                             </Grid.Column>
                         </Grid.Row>
-                        <Grid.Row style = {{height : "200px", marginTop : "20px"}} columns = {1}>
+                        <Grid.Row id = "GridRows" style = {{height : "200px", marginTop : "20px"}} columns = {1}>
                             <Grid.Column textAlign='center'>
                                 <Fade bottom>
                                     <Header style = {{ fontWeight : '200',fontFamily : 'Arial', lineHeight : "30px" , color : "#222831"}}>
@@ -78,12 +78,12 @@ class MainPage extends Component{
                                 <Grid.Column width={8}></Grid.Column>
                                 <Grid.Column width={8}></Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : "-5px"}} columns = {1}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : "-5px"}} columns = {1}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '3em', color : "#222831"}}>Academic Background</Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{height : "200px", marginTop : "20px"}} columns = {1}>
+                            <Grid.Row id = "GridRows" style = {{height : "200px", marginTop : "20px" }} columns = {1}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{ fontWeight : '200',fontFamily : 'Arial', color : "#222831"}}>2015.03 ~ 2018.01<br/> 신일고등학교</Header>
                                     <Header style = {{ fontWeight : '200',fontFamily : 'Arial', color : "#222831"}}>2018.03 ~ ing<br/> 서울대학교 컴퓨터공학부</Header>
@@ -93,30 +93,30 @@ class MainPage extends Component{
                     </Fade>
                     <Fade bottom cascade>
                         <Grid>
-                            <Grid.Row columns = {2} style = {{height : '130px', marginTop : "20px"}} divided>
+                            <Grid.Row id = "GridRows" columns = {2} style = {{height : '130px', marginTop : "20px"}} divided>
                                 <Grid.Column width={8}></Grid.Column>
                                 <Grid.Column width={8}></Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : "-5px"}} columns = {1}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : "-5px"}} columns = {1}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '3em', color : "#222831"}}>Projects</Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row>
+                            <Grid.Row id = "GridRows">
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '2em', color : "#222831"}}>1. surBing</Header>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '1.2em', color : "#222831", marginTop : "-12px"}}>- Integrated Survey Platform -</Header>
                                 </Grid.Column>
                             </Grid.Row>
                             
-                            <Grid.Row style = {{marginTop : '20px'}}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : '20px' }}>
                                 <Grid.Column textAlign='center'>
                                 <Header style = {{fontWeight : '200',fontFamily : 'Arial', color : "#222831"}}>
                                     설문조사 폼의 제작, 실시, 설문 데이터의 공유를 통합적으로 제공하는 웹서비스
                                 </Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : '20px'}}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : '20px'}}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : "1.4em",  color : "#222831"}}>
                                     Frameworks & Languages 
@@ -133,7 +133,7 @@ class MainPage extends Component{
                                         Devoted as Full-Stack developer
                                     </Header>
                                     <Header style = {{ cursor : "pointer" , fontWeight : '100',fontFamily : 'Arial', fontSize : "1em",  color : "#222831"}}
-                                        onClick = {() => window.location = "https://github.com/jangsus1/swpp2019-team11"}
+                                        onClick = {() => window.location= "https://github.com/jangsus1/swpp2019-team11"}
                                     >
                                         <Icon name = "github" />
                                         https://github.com/swsnu/swpp2019-team11
@@ -141,21 +141,21 @@ class MainPage extends Component{
 
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : "80px"}}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : "80px"}}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '2em', color : "#222831"}}>2. SNU Calendar</Header>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '1.2em', color : "#222831", marginTop : "-12px"}}>- Official Event Management System-</Header>
                                 </Grid.Column>
                             </Grid.Row>
                             
-                            <Grid.Row style = {{marginTop : '20px'}}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : '20px'}}>
                                 <Grid.Column textAlign='center'>
                                 <Header style = {{fontWeight : '200',fontFamily : 'Arial', color : "#222831"}}>
                                     서울대학교 내의 공식 행사를 관리해주는 웹서비스
                                 </Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : '20px'}}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : '20px'}}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : "1.4em",  color : "#222831"}}>
                                     Frameworks & Languages 
@@ -182,28 +182,28 @@ class MainPage extends Component{
                     </Fade>
                     <Fade bottom cascade>
                         <Grid>
-                            <Grid.Row columns = {2} style = {{height : '130px', marginTop : "20px"}} divided>
+                            <Grid.Row id = "GridRows" columns = {2} style = {{height : '130px', marginTop : "20px"}} divided>
                                 <Grid.Column width={8}></Grid.Column>
                                 <Grid.Column width={8}></Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : "-5px"}} columns = {1}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : "-5px"}} columns = {1}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '3em', color : "#222831"}}>Others</Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : "10px"}}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : "10px"}}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', color : "#222831"}}>서울대학교 웹/앱 개발 동아리 WaffleStudio Programmer</Header>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', color : "#222831", marginTop : "-12px"}}>2019 ~ ing</Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : "10px"}}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : "10px"}}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', color : "#222831"}}>서울대학교 컴퓨터공학부 18학번 대표</Header>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', color : "#222831", marginTop : "-12px"}}>2018.09 ~ ing</Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row>
+                            <Grid.Row id = "GridRows">
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', color : "#222831"}}>서울대학교 공대노래패 단풍 Guitar</Header>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', color : "#222831", marginTop : "-12px"}}>2018 ~ 2019</Header>
@@ -213,16 +213,16 @@ class MainPage extends Component{
                     </Fade>
                     <Fade bottom cascade>
                         <Grid>
-                            <Grid.Row columns = {2} style = {{height : '130px', marginTop : "20px"}} divided>
+                            <Grid.Row id = "GridRows" columns = {2} style = {{height : '130px', marginTop : "20px"}} divided>
                                 <Grid.Column width={8}></Grid.Column>
                                 <Grid.Column width={8}></Grid.Column>
                             </Grid.Row>
-                            <Grid.Row style = {{marginTop : "-5px"}} columns = {1}>
+                            <Grid.Row id = "GridRows" style = {{marginTop : "-5px"}} columns = {1}>
                                 <Grid.Column textAlign='center'>
                                     <Header style = {{fontWeight : '100',fontFamily : 'Arial', fontSize : '3em', color : "#222831"}}>Contact Me</Header>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row centered colums = {3} style = {{marginTop : "10px", marginBottom : "100px"}}>
+                            <Grid.Row id = "GridRows" centered colums = {3} style = {{marginTop : "10px", marginBottom : "100px"}}>
                                 <Grid.Column textAlign = "center" style = {{display : "block", minWidth : "50px"}} width = {1}>
                                     <Icon onClick = {() => window.location = "https://github.com/jangsus1"} link size = "big" name = "github"/>
                                 </Grid.Column >
@@ -245,8 +245,6 @@ class MainPage extends Component{
                             </Grid.Row>
                         </Grid>
                     </Fade>
-                </div>
-                    <Navbar />
                 </div>
         )
     }
