@@ -3,6 +3,9 @@
     margin-right: 0px;
 }
 
-#burger {
+
+#main {
+    transition : filter 1s ease-in-out;
     pointer-events : all;
+    display : block;
 }

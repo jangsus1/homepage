@@ -1,13 +1,13 @@
-import React, {Component, createRef} from 'react'
+import React, {Component} from 'react'
 import {Header, Grid, Icon} from 'semantic-ui-react'
 import {Fade} from 'react-reveal'
+import { connect } from 'react-redux';
 import {Popover, OverlayTrigger} from 'react-bootstrap'
 import './MainPage.css'
 
 
 
 class MainPage extends Component{
-    contextRef = createRef()
     state = {
         subHeaderVisible : false,
         active : false,
@@ -16,6 +16,16 @@ class MainPage extends Component{
     componentDidMount(){
         setTimeout(() => {this.setState({subHeaderVisible : true})}, 500);
     }
+    componentDidUpdate(prevProps){
+        if(this.props!=prevProps){
+          if(this.props.menu_active){
+            document.getElementById("main").style.filter = "blur(10px)";
+          }
+          else{
+            document.getElementById("main").style.filter = "blur(0px)";
+          }
+        }
+      }
 
     copy = () => {
         const el = document.createElement('textarea')
@@ -250,4 +260,8 @@ class MainPage extends Component{
     }
 }
 
-export default MainPage
+const mapStateToProps = (state) => ({
+    menu_active : state.mn.menu_active
+})
+
+export default connect(mapStateToProps, null)(MainPage)

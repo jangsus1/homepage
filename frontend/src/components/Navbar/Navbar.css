@@ -1,5 +1,5 @@
 
-.Navbar {
+#Navbar {
     position: fixed; /* Sit on top of the page content */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
@@ -8,16 +8,22 @@
     right: 0;
     bottom: 0;
     opacity: 1;
+    pointer-events: none;
     margin : 0;
     padding: 0;
     overflow: hidden;
-    transition: backdrop-filter .5s linear;
-    border-width : 0.1;
+    transition: all 0.75s ease-in;
+    border-width : 0.01;
     z-index : 3;
 }
 
+#burger {
+    pointer-events: auto;
+}
+
 #menu {
-    display : none;
+    opacity : 0;
+    transition: all 0.5s;
 }
 
 .menuItem:hover {
@@ -28,7 +34,7 @@
 }
 
 #Item {
-    color : #06dce7;
+    color : #6878A6;
 }
 
 #blank {
