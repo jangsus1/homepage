@@ -31,7 +31,7 @@ class Navbar extends Component {
         window.location.assign('https://jangsus1.tistory.com')
       }
       else{
-        window.location.assign('https://surbing.shop')
+        window.location.assign('https://www.surbing.shop')
       }
     }
 
